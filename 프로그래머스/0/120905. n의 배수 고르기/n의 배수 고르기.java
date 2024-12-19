@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int[] solution(int n, int[] numlist) {
         int count = 0;
@@ -17,7 +19,10 @@ class Solution {
                 index++;
             }
         }
-
+        
         return answer;
+        
+        /* Stream 사용해보기 */
+        // return Arrays.stream(numlist).filter(value -> value % n == 0).toArray();
     }
 }
