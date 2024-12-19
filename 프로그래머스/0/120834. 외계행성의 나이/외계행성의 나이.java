@@ -5,9 +5,9 @@ class Solution {
         
         String[] strArr = String.valueOf(age).split("");
         
-        for (int i = 0; i < strArr.length; i++) {
-            answer += ageStr.charAt(Integer.valueOf(strArr[i]));
-        }
+        for (String str: strArr) {
+            answer += ageStr.charAt(Integer.valueOf(str));    
+        }   
         
         return answer;
     }
