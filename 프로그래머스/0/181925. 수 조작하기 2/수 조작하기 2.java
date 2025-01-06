@@ -1,21 +1,16 @@
 class Solution {
     public String solution(int[] numLog) {
-        String answer = "";
+        StringBuilder answer = new StringBuilder();
         
         for (int i = 1; i < numLog.length; i++) {
-            answer += cal(numLog[i], numLog[i - 1]);
+            int diff = numLog[i] - numLog[i - 1];
+            
+            if (diff == 1) answer.append("w");
+            else if (diff == -1) answer.append("s");
+            else if (diff == 10) answer.append("d");
+            else if (diff == -10) answer.append("a");
         }
         
-        return answer;
-    }
-    
-    private String cal(int num, int prev) {
-        switch (num - prev) {
-            case 1: return "w";
-            case -1: return "s";
-            case 10: return "d";
-            case -10: return "a";
-            default: return "";
-        }
+        return answer.toString();
     }
 }
