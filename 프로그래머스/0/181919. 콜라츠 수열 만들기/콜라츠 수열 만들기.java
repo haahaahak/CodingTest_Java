@@ -16,6 +16,11 @@ class Solution {
         
         answer.add(1);
         
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        int[] result = new int[answer.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = answer.get(i);
+        }
+        
+        return result;
     }
 }
