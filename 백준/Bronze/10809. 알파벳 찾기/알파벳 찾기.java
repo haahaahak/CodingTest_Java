@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        
+        String line = br.readLine();
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            sb.append(line.indexOf(ch)).append(" ");
+        }
+        System.out.print(sb.toString());
+    }
+}
