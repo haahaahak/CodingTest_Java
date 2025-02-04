@@ -10,7 +10,10 @@ public class Main {
         int B = Integer.parseInt(st.nextToken());
         int V = Integer.parseInt(st.nextToken());
         
-        int days = (int) Math.ceil((double) (V - B) / (A - B));
+        int days = (V - B) / (A - B);
+        if ((V - B) % (A - B) != 0) {
+            days++;
+        }
         
         System.out.print(days);
     }
